@@ -18,7 +18,10 @@ header,footer{
 footer{
 	font-size: 14px;
 }
-
+hgroup p{
+	font-size: 32px;
+	line-height: 1.2;
+}
 h1,h2,h3{
 	font-family: 'Major Mono Display', monospace;
 }
@@ -44,10 +47,6 @@ em{
 }
 
 /* class */
-.subtitle{
-	font-size: 32px;
-	line-height: 1.2;
-}
 .author{
 	font-size: 20px;
 	font-weight: 700;
@@ -58,12 +57,15 @@ em{
 .credit{
 	font-size: 16px;
 }
+.credit-ital{
+	font-style: italic;
+}
 
 /* response */
-.mainresponse p,.otherResponse p{
+.main-response p,.other-response p{
 	font-weight: 500;
 }
-.otherResponse .responseText{
+.other-response .response-text{
 	font-weight: 300;
 	font-style: italic;
 }
