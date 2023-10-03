@@ -1,9 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500&display=swap');
+@media screen and (prefers-reduced-motion: no-preference) {
+	html {
+	  scroll-behavior: smooth;
+	}
+  }
 
-/* background */
+/* global background */
 header, .response, footer{
 	background-color: black;
 	color:white
+}
+
+/* global margin */
+header, .article, .response{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+header{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.article, .response{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+hgroup{
+	margin-bottom: 20px;
+}
+p, h1{
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+article > p, h2, h3, .credit, .response p{
+	max-width: 794px;
+	margin-left: auto;
+	margin-right: auto;
+}
+blockquote{
+	max-width: 996px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-left: 40px;
+}
+.response-text{
+	margin-top: 50px;
+}
+.response-author{
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+/* global text leading */
+.article > p:not(:first-child), .credit p:not(:first-child), .main-response p:not(:first-child){
+	margin-top: 1.2em;
+}
+ .other-response p:not(:first-child){
+	margin-top: 0.5em;
 }
 
 /* general tag */
@@ -15,57 +71,123 @@ body{
 header,footer{
 	text-align: center;
 }
-footer{
-	font-size: 14px;
-}
-hgroup p{
-	font-size: 32px;
-	line-height: 1.2;
-}
-h1,h2,h3{
+h1,h2,h3,.quotation{
 	font-family: 'Major Mono Display', monospace;
 }
+p{
+	line-height: 1.5;
+}
+h3{
+	line-height: 1.2;
+}
+em{
+	font-style: italic;
+}
+
+/* specific tag */
 h1{
-	font-size: 128px;
+	/* font-size: 128px; */
+	font-size: clamp(64px, 10vw, 128px);
 	text-transform: uppercase;
+	margin-bottom: 60px;
+}
+hgroup p{ /* subtitle */
+	/* font-size: 32px; */
+	font-size: clamp(24px, 2vw, 32px);
+	line-height: 1.2;
+	margin-top: 12px;
+	max-width: 1100px;
 }
 h2{
 	font-size: 64px;
 }
 h3{
 	font-size: 36px;
-}
-p{
-	line-height: 1.5;
+	margin-top: 100px;
+	margin-bottom: 50px;
 }
 blockquote{
 	font-size: 24px;
 	font-weight: 500;
 }
-em{
-	font-style: italic;
+footer{
+	font-size: 14px;
+	padding-bottom: 10px;
 }
-
-/* class */
-.author{
-	font-size: 20px;
-	font-weight: 700;
-}
-.date{
-	color: #ABABAB;
-}
-.credit{
+.credit p{
 	font-size: 16px;
+	margin-top: 100px;
+	line-height: 2;
 }
 .credit-ital{
 	font-style: italic;
 }
+.cap{ /* cap the o in h3 */
+	text-transform: uppercase;
+}
+
+/* hanging quote */
+.quotation{
+	position: relative;
+	width: 0px;
+	height: 0px;
+}
+.quotation p{
+	font-size: 96px;
+	color: #ABABAB;
+	position: absolute;
+	left: -70px;
+	top: -50px;
+}
 
 /* response */
 .main-response p,.other-response p{
-	font-weight: 500;
+	font-weight: 400;
 }
 .other-response .response-text{
-	font-weight: 300;
+	font-weight: 200;
+	font-style: italic;
+	color: #ABABAB;
+}
+.response-text a:hover{
+	background-color: white;
+	color: black;
+}
+.article a{
+	background-color: whitesmoke;
+}
+.article a:hover{
+	background-color: black;
+	color: white;
+}
+/* scroll to middle of the screen */
+.anchor { 
+	position: absolute;
+	transform: translateY(-50vh);
+  }
+
+/* author */
+.author, .response-author, .date{
+	font-size: 20px;
+	font-weight: 700;
+}
+.author, .date{
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.date{
+	color: #ABABAB;
+}
+
+/* back to top */
+#back-to-top-button{
+	padding-right: 15px;
+	text-decoration: underline;
+	font-size: 14px;
+	position: absolute;
+	right: 0px;
+}
+#back-to-top-button:hover{
 	font-style: italic;
 }
