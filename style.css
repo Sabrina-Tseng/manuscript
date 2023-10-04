@@ -87,7 +87,7 @@ em{
 /* specific tag */
 h1{
 	/* font-size: 128px; */
-	font-size: clamp(64px, 10vw, 128px);
+	font-size: clamp(32px, 12vw, 144px);
 	text-transform: uppercase;
 	margin-bottom: 60px;
 }
@@ -97,6 +97,8 @@ hgroup p{ /* subtitle */
 	line-height: 1.2;
 	margin-top: 12px;
 	max-width: 1100px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 h2{
 	font-size: 64px;
